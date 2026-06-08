@@ -168,7 +168,7 @@
                         </form>
                     </div>
                 @else
-                    <a href="{{ route('login') }}" class="bg-[#FF7A45] hover:bg-[#E0602E] text-white px-6 py-2 rounded-full font-bold transition duration-300 shadow-md">
+                    <a href="{{ route('login') }}" style="background-color: #ff6a3c; color: white; padding: 10px 24px; border-radius: 50px; font-weight: bold; text-decoration: none; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
                         Login or Signup
                     </a>
                 @endauth
