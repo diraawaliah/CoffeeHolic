@@ -168,7 +168,9 @@
                         </form>
                     </div>
                 @else
-                    <button id="loginBtn" class="login-signup-btn">Login or Signup</button>
+                    <a href="{{ route('login') }}" class="bg-[#FF7A45] hover:bg-[#E0602E] text-white px-6 py-2 rounded-full font-bold transition duration-300 shadow-md">
+                        Login or Signup
+                    </a>
                 @endauth
                 <div class="header-icons" style="display: flex; align-items: center; gap: 15px;">
                     @auth
