@@ -73,4 +73,13 @@ class OrderController extends Controller
         // Pantulkan kembali ke halaman utama dengan notifikasi SweetAlert
         return redirect('/')->with('success', 'Yeay! Pesanan berhasil dibuat. Kopi favoritmu akan segera diproses! ☕✨');
     }
+
+    public function index()
+    {
+        // Mengambil semua data order milik user yang sedang login, diurutkan dari yang terbaru
+        $orders = \App\Models\Order::where('user_id', auth()->id())->latest()->get();
+        
+        // Melempar data tersebut ke halaman view 'my-orders'
+        return view('my-orders', compact('orders'));
+    }
 }
